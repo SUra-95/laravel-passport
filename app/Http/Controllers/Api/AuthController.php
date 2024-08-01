@@ -8,7 +8,8 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    public function register(Request $request){
+    public function register(Request $request)
+    {
         $registerdData = $request->validate([
             'name' => 'required|max:55',
             'email' => 'email|required|unique:users',
